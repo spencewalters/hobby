@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0E832DF-9B9B-48EF-BFD3-2E5077659B0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProvingGrounds</RootNamespace>
+    <AssemblyName>ProvingGrounds</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HobbyGame\Ambulation\Ambulator.cs" />
+    <Compile Include="HobbyGame\Ambulation\Momentum.cs" />
+    <Compile Include="HobbyGame\Ambulation\MovementDirection.cs" />
+    <Compile Include="HobbyGame\Camera\Camera.cs" />
+    <Compile Include="HobbyGame\Camera\CameraOperator.cs" />
+    <Compile Include="HobbyGame\Character\Character.cs" />
+    <Compile Include="HobbyGame\Character\CharacterAction.cs" />
+    <Compile Include="HobbyGame\Character\CharacterFactory.cs" />
+    <Compile Include="HobbyGame\Controls\CharacterController.cs" />
+    <Compile Include="HobbyGame\Controls\ControllerType.cs" />
+    <Compile Include="HobbyGame\Controls\EmptyController.cs" />
+    <Compile Include="HobbyGame\Controls\GameController.cs" />
+    <Compile Include="HobbyGame\Controls\GameControllerFactory.cs" />
+    <Compile Include="HobbyGame\Controls\PlayerController.cs" />
+    <Compile Include="HobbyGame\Controls\PlayerParams.cs" />
+    <Compile Include="HobbyGame\Effects\ClickEffect.cs" />
+    <Compile Include="HobbyGame\Effects\EffectsFactory.cs" />
+    <Compile Include="HobbyGame\Effects\EffectSprite.cs" />
+    <Compile Include="HobbyGame\GameModel.cs" />
+    <Compile Include="HobbyGame\CycleTimer.cs" />
+    <Compile Include="HobbyGame\MapMakerModel.cs" />
+    <Compile Include="HobbyGame\Map\TileFrames.cs" />
+    <Compile Include="HobbyGame\Programs\CharacterEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HobbyGame\Programs\CharacterEditor.Designer.cs">
+      <DependentUpon>CharacterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HobbyGame\Programs\CrappyStardew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HobbyGame\Programs\CrappyStardew.Designer.cs">
+      <DependentUpon>CrappyStardew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HobbyGame\Programs\MapMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HobbyGame\Programs\MapMaker.Designer.cs">
+      <DependentUpon>MapMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GoalsCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GoalsCard.Designer.cs">
+      <DependentUpon>GoalsCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HobbyGame\Map\LoadMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HobbyGame\Map\LoadMapForm.Designer.cs">
+      <DependentUpon>LoadMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HobbyGame\Map\Map.cs" />
+    <Compile Include="HobbyGame\Map\MapRepository.cs" />
+    <Compile Include="HobbyGame\Map\MapTile.cs" />
+    <Compile Include="HobbyGame\Map\MapTileFactory.cs" />
+    <Compile Include="HobbyGame\Map\MapTileType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HobbyGame\Programs\CharacterEditor.resx">
+      <DependentUpon>CharacterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HobbyGame\Programs\CrappyStardew.resx">
+      <DependentUpon>CrappyStardew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HobbyGame\Programs\MapMaker.resx">
+      <DependentUpon>MapMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GoalsCard.resx">
+      <DependentUpon>GoalsCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HobbyGame\Map\LoadMapForm.resx">
+      <DependentUpon>LoadMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HobbyGameMenuPicture.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
